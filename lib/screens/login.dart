@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_auth_example/components/auth_button.dart';
 import 'package:flutter_auth_example/components/auth_textfield.dart';
 
 class Login extends StatelessWidget {
@@ -13,8 +14,8 @@ class Login extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              const SizedBox(height: 50.0),
               const Icon(Icons.key, size: 100),
               const SizedBox(height: 50.0),
               const Text('Welcome back'),
@@ -29,6 +30,7 @@ class Login extends StatelessWidget {
                 label: 'Password',
                 icon: Icons.lock,
                 controller: passwordController,
+                isObscured: true,
               ),
               const SizedBox(height: 15.0),
               Padding(
@@ -44,7 +46,28 @@ class Login extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 25.0),
-              ElevatedButton(onPressed: () {}, child: const Text('Login')),
+              AuthButton(onTap: () {}, label: 'Sign In'),
+              const SizedBox(height: 50.0),
+
+              Row(
+                children: [
+                  Expanded(
+                    child: Divider(thickness: .5, color: Colors.grey[400]),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 1.0),
+                    child: Text(
+                      'or',
+                      style: TextStyle(color: Colors.grey[700]),
+                    ),
+                  ),
+                  Expanded(
+                    child: Divider(thickness: .5, color: Colors.grey[400]),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 20.0),
+              const Text('Create Account'),
             ],
           ),
         ),
