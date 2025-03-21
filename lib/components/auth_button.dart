@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class AuthButton extends StatelessWidget {
-  final Function onTap;
+  final GestureTapCallback onTap;
   final String label;
   const AuthButton({super.key, required this.onTap, required this.label});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: onTap,
       child: Container(
         padding: const EdgeInsets.all(25),
         margin: const EdgeInsets.symmetric(horizontal: 25),

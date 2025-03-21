@@ -46,7 +46,13 @@ class Login extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 25.0),
-              AuthButton(onTap: () {}, label: 'Sign In'),
+              AuthButton(
+                onTap: () {
+                  debugPrint('initiated tap');
+                  debugPrint(usernameController.text);
+                },
+                label: 'Sign In',
+              ),
               const SizedBox(height: 50.0),
 
               Row(
