@@ -16,7 +16,6 @@ class SignUp extends StatelessWidget {
         child: Center(
           child: Column(
             children: [
-              const SizedBox(height: 50.0),
               const Icon(Icons.create, size: 100),
               const SizedBox(height: 50.0),
               const Text('Create Account'),
