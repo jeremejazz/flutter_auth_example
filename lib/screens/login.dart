@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_auth_example/components/auth_button.dart';
 import 'package:flutter_auth_example/components/auth_textfield.dart';
+import 'package:flutter_auth_example/screens/signup.dart';
 
 class Login extends StatelessWidget {
   Login({super.key});
@@ -22,7 +23,7 @@ class Login extends StatelessWidget {
               const SizedBox(height: 25),
               AuthTextField(
                 label: 'Username',
-                icon: Icons.get_app_rounded,
+                icon: Icons.login,
                 controller: usernameController,
               ),
               const SizedBox(height: 15.0),
@@ -73,7 +74,14 @@ class Login extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 20.0),
-              const Text('Create Account'),
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(
+                    context,
+                  ).push(MaterialPageRoute(builder: (context) => SignUp()));
+                },
+                child: const Text('Create Account'),
+              ),
             ],
           ),
         ),
