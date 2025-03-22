@@ -14,7 +14,7 @@ This project should consume the API from NESTJS Auth Example project
 - [ ] Log in to Backend
 - [ ] Sign up to Backend
 - [ ] View Dashboard
-- [ ] Store access token securely
+- [ ] Store access token 
  
 
 
