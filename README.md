@@ -12,7 +12,7 @@ This project should consume the API from NESTJS Auth Example project
 - [x] Create Login Page
 - [x] Create Signup Page
 - [ ] Log in to Backend
-- [ ] Sign up to Backend
+- [x] Sign up to Backend
 - [ ] View Dashboard
 - [ ] Store access token 
  
