@@ -5,12 +5,14 @@ class AuthTextField extends StatelessWidget {
   final TextEditingController controller;
   final IconData icon;
   final bool isObscured;
+  final FormFieldValidator? validator;
   const AuthTextField({
     super.key,
     required this.label,
     required this.icon,
     required this.controller,
     this.isObscured = false,
+    this.validator,
   });
 
   @override
@@ -18,6 +20,7 @@ class AuthTextField extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 25.0),
       child: TextFormField(
+        validator: validator,
         controller: controller,
         obscureText: isObscured,
         decoration: InputDecoration(
