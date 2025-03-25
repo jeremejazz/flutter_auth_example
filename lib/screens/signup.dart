@@ -36,20 +36,6 @@ class _SignUpState extends State<SignUp> {
     final String username = usernameController.text.trim();
     final String password = passwordController.text.trim();
 
-    // if (fullName.isEmpty || username.isEmpty || password.isEmpty) {
-    //   showSnackBar(context, 'Please fill in all fields.', Colors.red);
-    //   return;
-    // }
-
-    // if (password.length < 6) {
-    //   showSnackBar(
-    //     context,
-    //     'Password must be at least 6 characters',
-    //     Colors.red,
-    //   );
-    //   return;
-    // }
-
     final Map<String, String> signUpData = {
       'fullName': fullName,
       'username': username,
